@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-EN">
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript Utilities - Vanilla Tabs</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<script src="js/script.js"></script>
+<script src="js/vanilla-tabs.js"></script>
+</head>
+<body class="demo-scrollanim">
+<h1>JavaScript Utilities - Vanilla Tabs</h1>
+<p>Simple tabs management</p>
+<div class="script-result">
+    <div class="demo-dk-jsu-tabs">
+        <div class="dk-jsu-triggers">
+            <a href="#">Trigger #1</a>
+            <a href="#">Trigger #2</a>
+            <a href="#">Trigger #3</a>
+        </div>
+        <div class="dk-jsu-targets">
+            <p>Result for target 1</p>
+            <p>Result for target 2</p>
+            <p>Result for target 3</p>
+        </div>
+    </div>
+</div>
+
+<h2>Example JS</h2>
+<script class="script-visible" contenteditable>window.domReady(function vanillatabsdomready(){
+    new vanillaTabs({
+        triggers: document.querySelectorAll('.dk-jsu-triggers a'),
+        targets:  document.querySelectorAll('.dk-jsu-targets p')
+    });
+});
+</script>
+<h2>Example CSS</h2>
+<style class="script-visible" contenteditable>.dk-jsu-triggers a:not(.is-current) {
+    text-decoration: none;
+}
+
+.dk-jsu-targets > :not(.is-current) {
+    display: none;
+}</style>
+
+</body>
+</html>
